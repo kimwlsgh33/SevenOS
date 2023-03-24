@@ -75,6 +75,8 @@ docker run -w /root -it --rm alpine:edge sh -uelic '
 '
 ```
 
+</details>
+
 ---
 
 ## 📂 File Structure
