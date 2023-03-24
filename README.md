@@ -29,8 +29,8 @@
     <a href="https://github.com/kimwlsgh33/SevenOS">
       <img alt="Repo Size" src="https://img.shields.io/github/repo-size/kimwlsgh33/SevenOS?color=%23DDB6F2&label=SIZE&logo=codesandbox&style=for-the-badge&logoColor=D9E0EE&labelColor=302D41" />
     </a>
-    <a href="https://twitter.com/intent/follow?screen_name=folke">
-      <img alt="follow on Twitter" src="https://img.shields.io/twitter/follow/folke?style=for-the-badge&logo=twitter&color=8aadf3&logoColor=D9E0EE&labelColor=302D41" />
+    <a href="https://twitter.com/intent/follow?screen_name=kimwlsgh33">
+      <img alt="follow on Twitter" src="https://img.shields.io/twitter/follow/isiba1dev?style=for-the-badge&logo=twitter&color=8aadf3&logoColor=D9E0EE&labelColor=302D41" />
     </a>
 </div>
 
