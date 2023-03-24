@@ -21,7 +21,7 @@
       <img alt="License" src="https://img.shields.io/github/license/kimwlsgh33/SevenOS?style=for-the-badge&logo=starship&color=ee999f&logoColor=D9E0EE&labelColor=302D41" />
     </a>
     <a href="https://github.com/kimwlsgh33/SevenOS/stargazers">
-      <img alt="Stars" src="https://img.shields.io/github/stars/kimwlsgh33/SevenOS?style=for-the-badge&logo=starship&color=c69ff5&logoColor=D9E0EE&labelColor=302D41" />
+      <img alt="Stars" src="https://img.shields.io/github/license/kimwlsgh33/SevenOS?color=%23EE999F&logo=starship&style=for-the-badge" />
     </a>
     <a href="https://github.com/kimwlsgh33/SevenOS/issues">
       <img alt="Issues" src="https://img.shields.io/github/issues/kimwlsgh33/SevenOS?style=for-the-badge&logo=bilibili&color=F5E0DC&logoColor=D9E0EE&labelColor=302D41" />
