@@ -35,18 +35,20 @@
 </div>
 
 ## Latest News
+
 <b> Init Project [AUTHOR](https://github.com/kimwlsgh33) </b>
 
-* [2023/02] [write boot asm](https://logosevens.com)
-* [2023/02] [write boot asm](https://logosevens.com)
-* [2023/02] [write boot asm](https://logosevens.com)
+- [2023/02] [write boot asm](https://logosevens.com)
+- [2023/02] [write boot asm](https://logosevens.com)
+- [2023/02] [write boot asm](https://logosevens.com)
 
 ---
 
 ## ✨ Features
 
 - 🔥 Transform your Neovim into a full-fledged IDE
-- 💤 Easily customize and extend your config with [lazy.nvim](https://github.com/folke/lazy.nvim)
+- 💤 Easily customize and extend your config with
+  [lazy.nvim](https://github.com/folke/lazy.nvim)
 - 🚀 Blazingly fast
 - 🧹 Sane default settings for options, autocmds, and keymaps
 - 📦 Comes with a wealth of plugins pre-configured and ready to use
@@ -59,7 +61,8 @@
 
 ## 🚀 Getting Started
 
-You can find a starter template for **LazyVim** [here](https://github.com/LazyVim/starter)
+You can find a starter template for **LazyVim**
+[here](https://github.com/LazyVim/starter)
 
 <details><summary>Try it with Docker</summary>
 
@@ -74,7 +77,38 @@ docker run -w /root -it --rm alpine:edge sh -uelic '
 
 ---
 
-# make operation system
+## 📂 File Structure
+
+The files under config will be automatically loaded at the appropriate time, so
+you don't need to require those files manually. **LazyVim** comes with a set of
+default config files that will be loaded **_before_** your own. See
+[here](https://github.com/LazyVim/LazyVim/tree/main/lua/lazyvim/config)
+
+You can add your custom plugin specs under `lua/plugins/`. All files there will
+be automatically loaded by [lazy.nvim](https://github.com/folke/lazy.nvim)
+
+<pre>
+~/.config/nvim
+├── lua
+│   ├── config
+│   │   ├── autocmds.lua
+│   │   ├── keymaps.lua
+│   │   ├── lazy.lua
+│   │   └── options.lua
+│   └── plugins
+│       ├── spec1.lua
+│       ├── **
+│       └── spec2.lua
+└── init.lua
+</pre>
+
+## ⚙️ Configuration
+
+---
+
+Refer to the [docs](https://lazyvim.github.io)
+
+## #8CA1AF Documentation
 
 ## 1. boot system
 
