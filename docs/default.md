@@ -1,9 +1,8 @@
-```asm
-//
-// Assmbly Program to print "Hello World!" on the screen
-// to stdout
-//
+# Default Usage
 
+## print "Hello World!" on the screen to stdout
+
+```asm
 .global _start  // _start is the entry point of the program, Provide the entry point to the linker (address of the entry point)
 section .text  // separate the code from the data
 
@@ -22,9 +21,12 @@ _start:
 section .data
 
 msg db "Hello World!", 0x0a
+```
 
+## build with nasm
 
-// nasm -f elf hello.asm -o hello.o
-// ld -m elf_i386 -s -o hello hello.o
-// ./hello
+```sh
+nasm -f elf hello.asm -o hello.o
+ld -m elf_i386 -s -o hello hello.o
+./hello
 ```
