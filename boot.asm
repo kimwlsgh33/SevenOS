@@ -1,33 +1,44 @@
 ;; boot.asm
 ;; this is a simple boot loader
 ;; using NASM (Netwide Assembler)
-
-mov ah, 0x0e    ; ah : integer, IO / 0x0e : print character
-mov al, 65      ; al : integer, IO / 65 : ASCII code for 'A'
-int 0x10        ; int : interrupt / 0x10 : video interrupt - excute BIOS
-
-;; mov bx, 4       ; bx : address / 4 : number of times to print
-;; cmp bx, 5       ; cmp : compare / bx : address / 5 : number to compare to
-;; je label       ; jne : jump if not equal / loop : label
+[org 0x7c00] ; org : origin / 0x7c00 : start location for preventing conflict with BIOS
+mov ah, 0x0e
+mov bx, variableName            ; save address of variableName
 
 loop:
-    inc al      ; inc : increment address / al : integer, IO
-    cmp al, 90  ; cmp : compare / al : integer, IO / 90 : ASCII code for 'Z'
-    ;; mov ah, 0x0e
-    ;; mov al, 'X'
+    mov al, [bx]                    ; move value at address bx to al
+    cmp al, 0x00                    ; compare al to 0x00
+    je end                          ; jump to end if equal
     int 0x10
-    jne loop    ; jne : jump if not equal / loop : label
-jmp $
+    inc bx                          ; increment bx
+    jmp loop
 
-; the whole binary file needs to be 512 bytes long to be bootable
-; so we need to pad the rest of the file with 0s
+variableName:
+    db "[Input Any String] : ", 0
 
-; jmp $ : jump to current($) location
-; jmp $ ;
+end:
+
+;; save character
+char:
+    db 0
+
+input:
+    mov ah, 0                       ; keyboard interrupt
+    int 0x16                        ; interrupt 0x16
+
+    mov ah, 0x0e                    ; video interrupt
+    int 0x10                        ;
+    mov al, [char]                  ; move value at address char to al
+    jmp input
+
+;; save string
+;; buffer:
+;;     times 10 db 0               ; db : define byte
+;;     mov bx, buffer              ; save address of buffer
+;;     mov [bx], al                ; move value at address al to [bx]
+;;     inc bx                      ; increment bx
+
+
 times 510-($-$$) db 0  ; db : define byte
-; times : repeat the following command n times
-; $$ : start location
-; 510-($-$$) : 510 - (current location - start location)
 
-db 0x55, 0xaa 
-; last two bytes of the file must be 0x55 and 0xaa (boot signature)
+db 0x55, 0xaa
